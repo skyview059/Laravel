@@ -34,6 +34,7 @@ Route::get('/user-logout','BlogController@user_logout');
 //-------------------------------end users--------------------------------
 //-------------------------------Start Comments------------------------
 Route::post('/save-comments', 'BlogController@save_comments');
+Route::get('/save-comments/', 'BlogController@save_reply');
 
 //--------------------------------End Comments-------------------------
 
