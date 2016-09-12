@@ -80,7 +80,7 @@ class BlogController extends Controller
     public function category_blog($id)
     {
         $all_category_blog= DB::table('tbl_blog')->where('category_id',$id)
-                                                                        ->where('publication_status', 1)->get();
+                ->where('publication_status', 1)->get();
         $all_category =  DB::table('tbl_category')->where('publication_status', 1)->get();
 //                echo '<pre>';
 //        print_r($all_category_blog);
@@ -139,14 +139,16 @@ class BlogController extends Controller
         return redirect('/blog-details/'.$request->blog_id);
     }
 
-    
+   function save_reply(){
+        //  print_r( $_GET);
+        //echo 'Rakib';
+   } 
 
-    public function user_logout()
-    {
-        Session::put('user_id','');
-        Session::put('name','');
-        Session::put('message','You Are Succsssfully Logout ! ');
-       return  redirect('/sign-in');
+    public function user_logout(){		
+		Session::put('user_id','');
+		Session::put('name','');
+		Session::put('message','You Are Succsssfully Logout ! ');
+		return  redirect('/sign-in');
     }
 
     public function my_portfolio()
@@ -159,70 +161,5 @@ class BlogController extends Controller
                 ->with('maincontent',$content)
                 ->with('friends',$friends);
     }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  Request  $request
-     * @return Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  Request  $request
-     * @param  int  $id
-     * @return Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return Response
-     */
-    public function destroy($id)
-    {
-        //
-    }
+  
 }

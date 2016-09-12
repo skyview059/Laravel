@@ -25,7 +25,7 @@ Route::get('/','BlogController@index');
 Route::get('/sign-up','UserController@sign_up');
 Route::get('/sign-in','UserController@sign_in');
 Route::get('/contact','BlogController@contact');
-Route::get('/sports-tv','BlogController@sports_tv');
+// Route::get('/sports-tv','BlogController@sports_tv');
 
 //-------------------------------start users--------------------------------
 Route::post('/save-user', 'UserController@save_user');
@@ -34,7 +34,7 @@ Route::get('/user-logout','BlogController@user_logout');
 //-------------------------------end users--------------------------------
 //-------------------------------Start Comments------------------------
 Route::post('/save-comments', 'BlogController@save_comments');
-Route::get('/save-comments/', 'BlogController@save_reply');
+Route::get('/comment-reply', 'BlogController@save_reply');
 
 //--------------------------------End Comments-------------------------
 

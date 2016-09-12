@@ -30,7 +30,7 @@
 
     <h3>Contact Form</h3>
 
-    <form method="post" name="contact" action="#">
+    <form method="post" name="contact" action="#">        
 
         <input type="hidden" name="post" value="Send" />
         <label for="author">Name:</label> <input type="text" id="author" name="author" class="required input_field" />

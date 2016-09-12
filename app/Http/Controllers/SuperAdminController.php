@@ -130,19 +130,18 @@ class SuperAdminController extends Controller
             $image_url = $destination_path . $image_full_name;
             $success = $request->file('blog_image')->move($destination_path, $image_full_name);
 
-        if($success)
-        {
-        $blog= new Blogs();
-        $blog->category_id=$request->category_id;
-        $blog->blog_title=$request->blog_title;
-        $blog->blog_short_description=$request->blog_short_description;
-        $blog->blog_long_description=$request->blog_long_description;
-        $blog->publication_status=$request->publication_status;
-        $blog->author_name=Session::get('admin_name');
-        $blog->blog_image=$image_url;
-        $blog->save();
-        Session::put('message','Save Blog Information Successfully !');
-        return redirect('/add-blog');  
+        if($success){
+            $blog   = new Blogs();
+            $blog->category_id=$request->category_id;
+            $blog->blog_title=$request->blog_title;
+            $blog->blog_short_description=$request->blog_short_description;
+            $blog->blog_long_description=$request->blog_long_description;
+            $blog->publication_status=$request->publication_status;
+            $blog->author_name=Session::get('admin_name');
+            $blog->blog_image=$image_url;
+            $blog->save();
+            Session::put('message','Save Blog Information Successfully !');
+            return redirect('/add-blog');  
         }
        }
     }
