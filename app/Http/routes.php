@@ -66,3 +66,14 @@ Route::get('/category-blog/{id}', 'BlogController@category_blog');
 Route::get('/blog-details/{id}', 'BlogController@blog_details');
 
 //-------------------------------end category--------------------------------
+
+
+
+
+
+
+
+
+
+
+

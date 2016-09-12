@@ -7,7 +7,7 @@
     </div>
     <div class="post_content">
 
-        <h2><a href="blog_post.html">{{$v_blog->blog_title}}</a></h2>
+        <h2><a href="{{URL::to('blog-details/'.$v_blog->id)}}">{{$v_blog->blog_title}}</a></h2>
 
         <strong>Author:</strong>{{$v_blog->author_name}} | <strong>Date:</strong> <a href="#">{{$v_blog->created_at}}</a>
 
