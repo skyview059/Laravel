@@ -1,4 +1,5 @@
 /node_modules
 Homestead.yaml
 /vendor/
-/nbproject/
+/vendor/*
+/nbproject

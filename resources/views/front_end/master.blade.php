@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <title>Red Blog Theme - Free CSS Templates</title>
+        <title>LARA TEST</title>
         <meta name="keywords" content="Red Blog Theme, Free CSS Templates" />
         <meta name="description" content="Red Blog Theme - Free CSS Templates by templatemo.com" />
         <link href="{{URL::asset('front_end/css/templatemo_style.css')}}" rel="stylesheet" type="text/css" />
