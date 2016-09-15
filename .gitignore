@@ -3,3 +3,4 @@ Homestead.yaml
 /vendor/
 /vendor/*
 /nbproject
+/public/bower_components/
