@@ -298,8 +298,14 @@ em { color: #5d6d1e; }
 	margin: 0;
 	padding: 10px 0 10px 0;
 	line-height: 30px;
+	text-align: right;
+	direction: rtl;
 }
 
+.post_section .post_content > .authortime{direction:rtl;text-align: right;}
+.post_section .post_content > .authortime .author{font-family:tahoma;}
+
+.post_section .post_content .text{font-family:tahoma;}
 .post_section p {
 	text-align: justify;
 	margin-bottom: 10px;
@@ -309,6 +315,8 @@ em { color: #5d6d1e; }
 	clear: both;
 	display: block;
 	margin: 20px 0;
+	position: relative;
+	max-width: 100%;
 }
 
 .post_section .comment {
