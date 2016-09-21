@@ -25,6 +25,17 @@ class BlogController extends Controller
                 ->where('publication_status', 1)
                 ->orderBy('id', 'desc')
                 ->get();
+		$allblog = array();
+		foreach($all_blog as $v)
+		{
+			$m = date('M', strtotime($v->created_at));
+			$v->m = $m;
+			$d = date('d', strtotime($v->created_at));
+			$v->d = $d;
+			$allblog[] = $v;
+		}
+		
+		
         $populer_blog =  DB::table('tbl_blog')
                 ->where('publication_status', 1)
                 ->orderBy('hit_count', 'desc')
@@ -36,7 +47,7 @@ class BlogController extends Controller
 //        exit();
         
         $category= view('pages.category')->with('all_published_category',$all_category);
-        $content= view('pages.home_content')->with('all_published_blog',$all_blog);
+        $content= view('pages.home_content')->with('all_published_blog',$allblog);
         $populer= view('pages.populer')->with('populer_blog',$populer_blog);
         $ads= view('pages.ads');
         return view('front_end.master')

@@ -1,0 +1,15 @@
+{
+  "name": "public",
+  "homepage": "https://github.com/hamid80386/LaraTest",
+  "authors": [
+    "Hamid Abbasi <Hamid@Saqar-pc>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "dependencies": {
+    "font-awesome": "fontawesome#^4.6.3",
+    "jquery": "^3.1.0",
+    "bootstrap": "^3.3.7"
+  }
+}
